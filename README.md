@@ -1,9 +1,9 @@
 # FHL_Cube
 1. Install **Boost C++ Libraries**.
-2. Decompress _sampleGraph.txt.zip_ and _sampleBoundData_2DSky.zip_ (in the folder sampleBoundData) for running the code on the sample road network.
+2. Decompress **_sampleGraph.txt.zip_** and **_sampleBoundData_2DSky.zip_** (in the folder sampleBoundData) for running the code on the sample road network.
 3. The parameters in code have been preset for running the sample road network.
 4. Before run the code, please check the description of the parameters, and ensure the setting for data is correct.
-   - Please re-set **PARAMETERs** below if the graph is changed.
+   - Please re-set **PARAMETERs** in the control panel of **_fhl_cube.cpp_** (at the beginning of the file) if the graph is changed.
      - **sm**: The number of threads on index contraction.
      - **sm2**: The number of threads on propagation.
      - **sm3**: The number of threads on small trees index construction.
