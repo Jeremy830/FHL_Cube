@@ -12,8 +12,8 @@
      - **fn**: The number of partitions (re-set it if the number of partitions is changed).
      - **All_v**: The number of vertices in the road network.
      - **fullspace**: The total number of dimensions of the road network.
-     - **subgraphBound**: The path of the folder: sampleBoundData/sampleBoundData_SubBound.
+     - **subgraphBound**: The path of the folder: _sampleBoundData/sampleBoundData_SubBound_.
        - _NOTE: It needs to save the boundary vertices in every partition._
-     - **sub_bound_skylines**: The path of the folder: sampleBoundData/sampleBoundData_2DSky.
+     - **sub_bound_skylines**: The path of the folder: _sampleBoundData/sampleBoundData_2DSky_.
        - _NOTE: It needs to save the skyline paths from boundary vertices to boundary vertices.The folder sampleBoundData only provides the skyline paths in all the 2d subspaces. Please use the complete skyline paths for testing the real performance._
 5. Makefile: Run the command **make** to compile and run the code.
