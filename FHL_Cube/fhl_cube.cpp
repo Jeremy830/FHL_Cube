@@ -1992,9 +1992,6 @@ struct Sub_Tree_Decomposition {
 	}
 
 	void makeIndexDFS_new(int p, vector<int>& list, int* toList) {
-		vector<pair<int, vector<int>>> z;
-		vector<pair<int, vector<int>>> _z;
-		vector<pair<int, vector<int>>> zz;
 		judge ju;
 
 		vector<int> C;
@@ -2004,7 +2001,6 @@ struct Sub_Tree_Decomposition {
 			C.push_back(INF);
 		}
 
-		zz.resize(list.size());
 		Tree[p].pos.resize(Tree[p].vert.size() + 1);
 		Tree[p].skyToAnc.resize(list.size());
 		Tree[p].TPIS_ANS.resize(list.size());
@@ -2253,7 +2249,6 @@ struct Sub_Tree_Decomposition {
 		sm2->wait();
 		vector<pair<int, vector<int>>> z;
 		vector<pair<int, vector<int>>> _z;
-		vector<pair<int, vector<int>>> zz;
 		vector<pair<int, vector<int>>> zz_s;
 		unordered_map<int, vector<int>> posInSub;
 		vector<int> ls;
@@ -2272,6 +2267,7 @@ struct Sub_Tree_Decomposition {
 					vector<pair<int, vector<int>>> assign;
 					vector<pair<int, vector<int>>> assign_s;
 					unordered_map<int, vector<int>> assign_pos;
+					vector<pair<int, vector<int>>> zz;
 					vector<int> tmp_ls;
 					if (x == y)
 					{
@@ -2382,6 +2378,7 @@ struct Sub_Tree_Decomposition {
 
 			for (int i = 0; i < list.size(); i++) {
 				vector<int> hp;
+				vector<pair<int, vector<int>>> zz;
 				int y = list[i];
 				hp = hpList[i];
 				for (int vi = 0; vi < hp.size(); vi++) {
@@ -3909,9 +3906,7 @@ struct Bound_Tree_Decomposition {
 	}
 
 	void makeIndexDFS_new(int p, vector<int>& list, int* toList) {
-		vector<pair<int, vector<int>>> z;
-		vector<pair<int, vector<int>>> _z;
-		vector<pair<int, vector<int>>> zz;
+		
 		judge ju;
 
 		vector<int> C;
@@ -3920,8 +3915,6 @@ struct Bound_Tree_Decomposition {
 
 			C.push_back(INF);
 		}
-
-		zz.resize(list.size());
 		Tree[p].pos.resize(Tree[p].vert.size() + 1);
 		Tree[p].skyToAnc.resize(list.size());
 		Tree[p].TPIS_ANS.resize(list.size());
@@ -4147,7 +4140,6 @@ struct Bound_Tree_Decomposition {
 		vector<pair<int, vector<int>>> z;
 		unordered_map<int, vector<int>> po;
 		vector<pair<int, vector<int>>> _z;
-		vector<pair<int, vector<int>>> zz;
 		vector<pair<int, vector<int>>> zz_s;
 		unordered_map<int, vector<int>> posInSub;
 		vector<int> ls;
@@ -4199,7 +4191,7 @@ struct Bound_Tree_Decomposition {
 				for (int j = 0; j < Tree[p].vert.size(); j++)
 				{
 					int x = Tree[p].vert[j];
-
+					vector<pair<int, vector<int>>> zz;
 
 					if (x == y)
 					{
@@ -4328,6 +4320,7 @@ struct Bound_Tree_Decomposition {
 				if (b_map[y] == b_map[tp]) {
 					continue;
 				}
+				vector<pair<int, vector<int>>> zz;
 				unordered_map<int, vector<int>> hopInSub;
 				vector<int> hp;
 				hp = hpList[i];
